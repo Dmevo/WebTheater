@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebTheater</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<center>
+    <br>
+    <h1>WebTheater</h1><br><hr>
+    
+    {% for categoria in lista_categoria %}
+
+    <h2>{{categoria.get_nome()}}</h2>
+    <h3>Videos mais curtidos</h3><hr>
+
+        {% for video in categoria.get_lista_video() %}
+            <img src="{{ url_for('static', filename='img/'+video.get_url_img())}}" width="300" height="200"> <br> <h3>{{video.get_titulo()}}</h3>
+            <h3><a href="{{url_for('videos', id=video.get_id())}}">Assistir</a></h3><hr>
+        {% endfor %}
+    {% endfor %}
+</center>
+</body>
+
+
