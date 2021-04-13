@@ -1,6 +1,6 @@
 class Video:
     
-    def __init__(self, titulo = None, curtidas = None, descricao = None, url_video = None, url_img = None, data_publicacao = None, qtd_visualizacao = None, categoria = None):
+    def __init__(self, id = None, titulo = None, curtidas = None, descricao = None, url_video = None, url_img = None, data_publicacao = None, qtd_visualizacao = None, categoria = None):
         self.titulo = titulo
         self.curtidas = curtidas
         self.descricao = descricao
@@ -58,18 +58,8 @@ class Video:
     def get_url_img(self):
         return self.url_img
 
-"""
+    def set_id(self, id):
+        self.id = id
 
-video1 = Video()
-
-video1.set_titulo("One Piece EP 254")
-video1.set_curtidas(457)
-video1.set_descricao("Os mugiwara viajam para Water 7")
-video1.set_url_video("onepiece_ep254.mp4")
-
-print("O titulo do video é {}".format(video1.get_titulo()))
-print("Possui {} curtidas".format(video1.get_curtidas()))
-print("A descricao é: {}".format(video1.get_descricao()))
-print("A URL é {}".format(video1.get_url_video()))
-
-"""
+    def get_id(self):
+        return self.id

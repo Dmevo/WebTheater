@@ -1,10 +1,11 @@
 class Categoria:
     
-    def __init__(self, nome = None, url_foto = None, descricao_categoria = None):
+    def __init__(self, id = None, nome = None, url_foto = None, descricao_categoria = None, lista_video = None):
+        self.id = id
         self.nome = nome
         self.quantidade_videos = 0
         self.url_foto = url_foto
-        self.id = id
+        self.lista_video = []
 
     def set_nome(self, nome):
         self.nome = nome
@@ -30,19 +31,16 @@ class Categoria:
     def get_descricao_categoria(self):
         return self.descricao_categoria
 
-"""
+    def add_lista_video(self, video):
+        self.lista_video.append(video)
 
-categoria1 = Categoria()
+    def get_lista_video(self):
+        return self.lista_video
 
-categoria1.set_nome("Danilo")
-categoria1.set_id("156.782.000")
-categoria1.set_quantidade_videos(5)
-categoria1.set_url_foto("fotinha.png")
+    def set_id(self, id):
+        self.id = id
 
-print("Nome da categoria é {}".format(categoria1.get_nome()))
-print("Possui {} videos".format(categoria1.get_quantidade_videos()))
-print("O ID é {}".format(categoria1.get_id()))
-print("O URL da foto é {}".format(categoria1.get_url_foto()))
+    def get_id(self):
+        return self.id
 
-"""
 
