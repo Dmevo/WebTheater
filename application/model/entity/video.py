@@ -9,13 +9,15 @@ class Video:
         self.qtd_visualizacao = qtd_visualizacao
         self.categoria = categoria
         self.url_img = url_img
-        self.id = id
 
     def set_titulo(self, titulo):
         self.titulo = titulo
     
     def get_titulo(self):
         return self.titulo
+
+    def set_curtidas(self, curtidas):
+        self.curtidas = curtidas
 
     def get_curtidas(self):
         return self.curtidas

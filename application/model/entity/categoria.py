@@ -5,7 +5,7 @@ class Categoria:
         self.nome = nome
         self.quantidade_videos = 0
         self.url_foto = url_foto
-        self.lista_video = lista_video
+        self.lista_video = []
 
     def set_nome(self, nome):
         self.nome = nome
